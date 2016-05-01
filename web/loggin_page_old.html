@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Log in</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-red.min.css" />
+        <link rel="stylesheet" href="style_1.css" />
+        <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+            function show(target){
+        document.getElementById(target).style.display = 'block';
+        }
+        function showflex(target){
+        document.getElementById(target).style.display = 'flex';
+        }
+        function hide(target){
+        document.getElementById(target).style.display = 'none';
+        }
+function hidemail(){
+    var count = 1;
+    show('spin');
+    hide('email');
+    var snackbarContainer = document.querySelector('#demo-toast-example');
+        var data = {message: 'This is demo for Log-in only',
+              timeout: 7000,
+        };
+        
+    
+    setInterval(function(){
+        count--;
+        if (count == 0) {
+            hide('spin');
+            show('password');
+            showflex('avatar');
+            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        }
+    },1000);
+}
+function hidepassword(){
+    var count = 1;
+    show('spin');
+    hide('password');
+    setInterval(function(){
+        count--;
+        if (count == 0) {
+            window.location = 'index_logged_in.html'; 
+            
+        }
+    },1000);
+}
+</script>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+              <div class="mdl-layout__header-row ">
+                <!-- Title -->
+                <span class="mdl-layout-title"><a href="index.html" style="color:inherit;text-decoration: none;font-size:inherit;font-weight: inherit;">Graviet</a></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+              
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <!-- Expandable Search -->
+                      <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                      <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                      <input class="mdl-textfield__input" type="text" id="sample6">
+                      <label class="mdl-textfield__label" for="sample-expandable">Search</label>
+                    </div>
+                  </div>
+                </form>
+                  <a class="mdl-navigation__link" href="index.html">Home Page</a>
+                  <a id="tt4" class="mdl-navigation__link" href="create_account.html">Switch to Create Account Page</a>
+                </nav>  
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--bottom" for="tt4">
+Go to Create account page instead of log-in page
+</div>
+              </div>
+            </header>
+            <div class="mdl-layout__drawer ">
+              <span class="mdl-layout-title">Menu</span>
+              <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home Page</a>
+                <a class="mdl-navigation__link" href="create_account.html">Create Account</a>
+                <a class="mdl-navigation__link" href="dashboard.html">Dashboard concept</a>
+              </nav>
+            </div>
+            <main class="mdl-layout__content" style="background-color:#263238;">
+                <div class="page-content" >
+                    <h3 style="text-align:center;color:#fff;font-weight: 300;padding-top:10px; margin-bottom: 5px;">Account</h3>
+                    
+                    <div class="mdl-grid" style='padding: 20px 0;' > 
+                    <div id='avatar' class="mdl-cell mdl-cell--12-col" style="display: none;
+                    box-sizing:border-box;text-align:center;
+                    align-items: center;"><div class="mdl-layout-spacer"></div>
+                        <div style="text-align:center">
+                            
+                            <img style="width:100px;height:100px;border-radius:50%;" src="https://lh3.googleusercontent.com/-2be3y6CYqxY/UouIj1UKvRI/AAAAAAAAALk/mUCoE8Dfj-Evg0qcZ2UgWy2s3gZ4U3aqACKgB/w138-h140-p/556580_511011842245937_417112372_n.jpg">
+                            <br>
+                            <br>
+                            <a style="font-size:14px;font-weight:500;color:#fff">Khang Le</a>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                        
+                    <div class="mdl-cell mdl-cell--12-col" style="display: flex;
+                    box-sizing:border-box;text-align:center;
+                    align-items: center;padding-top:0px;"><div class="mdl-layout-spacer"></div>
+                        
+                        <form action="#" id="email">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="email-input" style="color:#859ba6;border-bottom:1px solid rgb(55, 71, 79);">
+                          <label class="mdl-textfield__label" style="color:#859ba6;" for="email-input">Email</label>
+                        </div>
+                            <br>    
+                           
+                            <br>
+                            <button id="test" onclick="hidemail();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button">
+                        Continue
+                </button> 
+                     </form>
+                        <br>
+                         <div class="mdl-spinner mdl-js-spinner is-active" id="spin" style="display: none;"></div>
+                        <form action="#" id="password" style="display:none;">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="password" id="password-input" style="color:#859ba6;border-bottom:1px solid rgb(55, 71, 79);">
+                          <label class="mdl-textfield__label" style="color:#859ba6;" for="password-input">Password</label>
+                        </div>
+                            <br>    
+                           
+                            <br>
+                            <a onclick="hidepassword();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">
+                        Login
+                </a> 
+                            <br><br>
+                            <a href="#" style="text-decoration:none;color:#008394;">Forget Password?</a>
+                      </form>
+                        
+                         
+                    <div class="mdl-layout-spacer"></div>
+                    </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
+    </body>
+</html>

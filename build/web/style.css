@@ -1,0 +1,109 @@
+            .mdl-layout__header{
+                min-height:56px;
+                background:#37474f;
+            }
+            .mdl-layout__header-row{
+                height:56px;
+            }
+            .mdl-navigation__link{
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom:3px solid transparent;
+                opacity:1;
+            }
+            .mdl-navigation__link:hover{
+                border-bottom:3px solid #00bcd4;
+            }
+            .mdl-layout__header-row .mdl-navigation__link{
+                padding:0;
+                line-height: 51px;
+                margin:0 24px;
+            }
+            .mdl-layout__content{
+               
+                background-color:#FAFAFA;
+            }
+            .page-content{
+                max-width:1400px;
+                margin:auto;
+            }
+            .mdl-cell--4-col{
+                width:100%;
+                max-width:330px;
+            }
+            .demo-card-square.mdl-card {
+                width: 100%;
+                height: auto;
+              }
+               .mdl-card__actions {
+                    display: flex;
+                    box-sizing:border-box;
+                    align-items: center;
+                  }
+              .card-title{
+                  color:#607D8B;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  font-size:14px;
+                  font-family: "Roboto","Helvetica","Arial",sans-serif;
+              }
+              .card-cover{
+                  max-height: 500px;
+                  overflow:hidden;
+              }
+              .card-title-padding{
+                  padding-top:25px;
+              }
+              .card-menu{
+                  float:right;
+              }
+              .love--icon{
+                  color:#9E9E9E;
+              }
+              img{
+                  width:100%;
+              }
+              @media only screen and (max-width: 1400px){
+                  .page-content{
+                      max-width:1100px;
+                  }
+              }
+              @media only screen and (max-width: 1150px){
+                  .page-content{
+                      max-width:1150px;
+                  }
+              }
+              @media only screen and (max-width: 1050px){
+                .mdl-cell--4-col{
+                    width:100%;
+                    max-width:450px;
+                }                  
+                  .page-content{
+                      max-width:1000px;
+                  }
+                  .mdl-card{
+                      width:450px!important;
+                  }
+              }
+              @media only screen and (max-width: 970px){
+                  .page-content{
+                      max-width:750px;
+                      width:100%;
+                  }
+                  .mdl-cell--4-col{
+                      max-width:100%;
+                      padding-right:24px;
+                  }
+                  .mdl-card{
+                      min-width:100%;
+                  }
+              }
+              @media only screen and (max-width: 480px){
+                  .page-content{
+                      width:100%!important;
+                  }
+                  .mdl-card{
+                      width:98%!important;
+                      min-width:98%;
+                  }                  
+                }

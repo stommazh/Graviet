@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Graviet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-red.min.css" />
+        <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>      
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row ">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Graviet</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <!-- Expandable Search -->
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                                <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                                    <i class="material-icons">search</i>
+                                </label>
+                                <div class="mdl-textfield__expandable-holder">
+                                    <input class="mdl-textfield__input" type="text" id="sample6">
+                                    <label class="mdl-textfield__label" for="sample-expandable">Search</label>
+                                </div>
+                            </div>
+                        </form>
+                        <a class="mdl-navigation__link" href="index_logged_in.html">Home Page</a>
+                        <a class="mdl-navigation__link" href="index.html">Guest View</a>
+                    </nav>
+
+                    <button id="member-button"
+                            class="mdl-button mdl-js-button mdl-button--icon " data-badge="4">
+                        <a><img class="avatar-button" src="http://winaero.com/blog/wp-content/uploads/2015/05/user-200.png"></a>
+                    </button>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="member-button">
+                        <li class="mdl-menu__item"><a href="dashboard.html" target="_blank">Dashboard Concept</a></li>
+                        <li disabled class="mdl-menu__item">Upload</li>
+                        <li class="mdl-menu__item"><a href="index.html">Log out</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer ">
+                <span class="mdl-layout-title">Menu</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#">Search</a>
+                    <a class="mdl-navigation__link" href="index_logged_in.html">Home Page</a>
+                    <a class="mdl-navigation__link" href="#">Link 2</a>
+                    <a class="mdl-navigation__link" href="index.html">Log out</a>
+                </nav>
+            </div>
+            <a id="upload-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored upload-button">
+                <i class="material-icons">add</i>
+            </a>
+            <div class="mdl-tooltip mdl-tooltip--top mdl-tooltip--large" for="upload-button">
+                Upload
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    
+                    <div class="post-detail-wrapper">
+                        <div id="post-detail-1" class="mdl-grid post-detail">
+                            <div class="mdl-cell-detail">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp card-border">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/10/bb/e6/10bbe6a8c48ee168ea1abeeda9546e5d.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number one - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-1-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+
+                                    <!--                                        Card menu-->
+                                    <button id="card-1-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-1-menu">
+                                        <li class="mdl-menu__item">More from the Author</li>
+                                        <li class="mdl-menu__item">Share it</li>
+                                        <li disabled class="mdl-menu__item">A disabled action</li>
+                                        <li class="mdl-menu__item">Report</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+                        </div>    
+                    </div>
+                    
+                    <div class="mdl-grid" >
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/10/bb/e6/10bbe6a8c48ee168ea1abeeda9546e5d.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number one - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-1-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+
+                                    <!--                                        Card menu-->
+                                    <button id="card-1-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-1-menu">
+                                        <li class="mdl-menu__item">More from the Author</li>
+                                        <li class="mdl-menu__item">Share it</li>
+                                        <li disabled class="mdl-menu__item">A disabled action</li>
+                                        <li class="mdl-menu__item">Report</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/cb/62/3a/cb623a0bcd791bb97135a6535b565d17.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Get The Title of 2 
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-2-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-2-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-2-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/39/b8/8c/39b88c750c0d153b999f3f09e91cdb91.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        3 Wonder Design
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-3-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-3-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-3-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/71/3e/ca/713eca00f8b66868ae8b0b444a4db90a.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        4 A Card Post
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-4-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-4-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-4-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/bf/6b/a5/bf6ba57454429aeec03eda7f3b06eefc.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Title 5 goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-5-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-5-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-5-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/76/af/83/76af83b0b9c50a80e99762a6593b78e7.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Hello 6
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-6-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-6-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-6-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a8/87/32/a88732c7c25ddb1dddfd5be8501ea7ef.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 7
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-7-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-7-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-7-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/56/82/b1/5682b12b863bc5a9b12504226c601644.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 8 Subtitle
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-8-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-8-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-8-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/69/70/d3/6970d32ab4eef6161d4de80c0c9324e6.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 9
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-9-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-9-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-9-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/89/df/1c/89df1ceeb79793465779a273794faa10.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 10 - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-10-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-10-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-10-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/08/b3/ab/08b3abb76f8548e8e1f02e48be96c436.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 11 - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-11-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-11-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-11-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/87/37/1c/87371cb6af4a551306f7f5fd65339b77.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 12 - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-12-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-12-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-12-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+
+                        <!--                        Post card-->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                                <div class="card-cover">
+                                    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/31/92/42/319242dca890d3b1765ecc78dc29efb3.jpg">
+                                    </a>
+                                </div>
+                                <!--Title-->
+                                <div class="mdl-card__actions mdl-card--border card-title-padding">
+                                    <a class="card-title">
+                                        Post number 13 - Title goes here
+                                    </a>
+                                </div>                                    
+                                <div class="mdl-card__supporting-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Aenan convallis.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect view-more-color">
+                                        View Details
+                                    </a>                                     
+                                    <div class="mdl-layout-spacer"></div>
+                                    <button id="card-13-love"
+                                            class="mdl-button mdl-js-button mdl-button--icon love--icon">
+                                        <i class="material-icons">favorite_border</i>
+                                    </button>
+                                    <!--                                        Card menu-->
+                                    <button id="card-13-menu"
+                                            class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                                        data-mdl-for="card-13-menu">
+                                        <li class="mdl-menu__item">Some Action</li>
+                                        <li class="mdl-menu__item">Another Action</li>
+                                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                                        <li class="mdl-menu__item">Yet Another Action</li>
+                                    </ul>               
+                                </div>                                   
+                            </div>
+                        </div>
+                        <!--Navigation-->
+
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col nav-bar-bottom">  
+                        <!--                                <a id="navback" href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                                                            <i class="material-icons">arrow_backward</i>
+                                                          </a>                   
+                                                
+                                                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--right" for="navback">
+                                                Previous Articles
+                                                </div>
+                                                <div class="mdl-layout-spacer"></div>
+                                                        <a id="navfor" href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                                                            <i class="material-icons">arrow_forward</i>
+                                                          </a>                   
+                                                
+                                                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="navfor">
+                                                Next Articles
+                                                </div>-->
+                        <div class="mdl-layout-spacer"></div>
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent nav-bar-bottom-button mdl-layout--large-screen-only" href="#">
+                            First
+                        </a>
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent nav-bar-bottom-button" href="#">
+                            Previous
+                        </a>
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent nav-bar-bottom-button" href="#">
+                            Next
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer">
+                    <div class="mdl-mini-footer__left-section">
+                        <div class="mdl-logo">Graviet</div>
+                        <ul class="mdl-mini-footer__link-list">
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Privacy & Terms</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+        <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+        <script src="https://masonry-ordered.tasuki.org/jquery.masonry.ordered.js"></script>
+        <script>
+            var $grid = $('.mdl-grid').imagesLoaded(function () {
+                // init Masonry after all images have loaded
+                $grid.masonry({
+                    itemSelector: '.mdl-cell',
+                    layoutPriorities: {
+                        // Masonry default: Try to occupy highest available position.
+                        // Weight: Pixels of vertical distance from most upper spot.
+                        upperPosition: 1,
+                        // Shelf order: Try to display bricks in original order.
+                        //   (increases ordered-ness, decreases space-efficiency)
+                        // Weight: Pixels of distance of current brick's top left corner
+                        //         from previous brick's top right corner.
+                        shelfOrder: 2
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
