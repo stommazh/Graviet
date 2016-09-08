@@ -109,8 +109,8 @@
 <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
 <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 <!--CDN parts-->
-<!--<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>-->
+<!--<script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>-->
 <script>
     var $grid = $('.mdl-grid').imagesLoaded(function () {
         // init Masonry after all images have loaded
